@@ -1,0 +1,29 @@
+<div id="create-event" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="create-event-label" aria-hidden="true">
+  <div class="modal-dialog">
+    <%= form_for(@event) do |f| %>
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4>Create New Event</h4>
+        </div>
+        <div class="modal-body">
+          <%= f.label(:title) %>
+          <%= f.text_field(:title) %>
+          <%= f.label(:all_day) %>
+          <%= f.select(:all_day, [['Yes', true], ['Nope', false]]) %>
+          <%= f.label(:starts_at) %>
+          <%= f.datetime_select(:starts_at) %>
+          <%= f.label(:ends_at) %>
+          <%= f.datetime_select(:ends_at) %>
+          <%= f.label(:url) %>
+          <%= f.text_field(:url) %>
+          <%= f.label(:color) %>
+          <%= f.text_field(:color) %>
+        </div>
+        <div class="modal-footer">
+          <a href="#" class="close btn btn-danger" data-dismiss="modal">Cancel</a>
+          <%= f.submit('Save Event', class: 'btn btn-primary') %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

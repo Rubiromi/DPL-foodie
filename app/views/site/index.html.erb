@@ -1,0 +1,29 @@
+<h1>Site#index</h1>
+<p>Find me in app/views/site/index.html.erb</p>
+
+<a href="#hello" data-toggle="modal" class="btn btn-default">HELLO</a>
+<a href="#create-event" data-toggle="modal" class="btn btn-success">Create Event</a>
+<%= render('events/new_modal') %>
+<div id="restaurants" class="pull-right">
+
+</div>
+
+<div id="calendar">
+
+</div>
+
+
+
+<div id="hello" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="hello-modal-label" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4>Hello Modal</h4>
+      </div>
+      <div class="modal-body">
+        <p>YO YO !</p>
+      </div>
+    </div>
+  </div>
+</div>
