@@ -22,7 +22,7 @@ class SiteController < ApplicationController
   end
 
   def login
-    UserMailer.welcome('jeremywoertink@gmail.com').deliver
+    #UserMailer.welcome('billy@test.com').deliver
     redirect_to root_path
   end
 
