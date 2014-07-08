@@ -1,0 +1,19 @@
+<h1>Contact Page</h1>
+<p>Contact us and let us know what you think!</p>
+<%= form_tag(contact_path) do %>
+  <p>
+    <%= label_tag(:user_email) %><br />
+    <%= text_field_tag(:user_email) %>
+  </p>
+  <p>
+    <%= label_tag(:in_regard_to) %><br />
+    <%= text_field_tag(:in_regard_to) %>
+  </p>
+  <p>
+    <%= label_tag(:content) %><br />
+    <%= text_area_tag(:content) %>
+  </p>
+  <p>
+    <%= submit_tag('Send Contact') %>
+  </p>
+<% end %>

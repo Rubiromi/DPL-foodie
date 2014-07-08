@@ -13,4 +13,21 @@ class SiteController < ApplicationController
       end
     end
   end
+
+  def contact
+    if request.post?
+      NotificationMailer.contact_form(params).deliver
+      redirect_to root_path
+    end
+  end
+
+  def login
+    UserMailer.welcome('dude@party.house').deliver
+    redirect_to root_path
+  end
+
+  def report
+    AdminMailer.report.deliver
+    redirect_to root_path
+  end
 end
