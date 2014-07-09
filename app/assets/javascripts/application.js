@@ -56,16 +56,17 @@ $(function() {
     });
   });
 
-  var $form = $('form#new_event');
-
-  $('input.btn', $form).click(function() {
-    $.post($form.attr('action'), $form.serialize(), function(data) {
-      console.log(data);
-      console.log('Event created');
-      $('#create-event').modal('hide');
-      $('#calendar').html('');
-      loadEvents();
-    });
-    return false;
-  });
+  // makes the modal event form ajax
+  // var $form = $('form#new_event');
+  //
+  // $('input.btn', $form).click(function() {
+  //   $.post($form.attr('action'), $form.serialize(), function(data) {
+  //     console.log(data);
+  //     console.log('Event created');
+  //     $('#create-event').modal('hide');
+  //     $('#calendar').html('');
+  //     loadEvents();
+  //   });
+  //   return false;
+  // });
 });

@@ -6,6 +6,7 @@
     <tr>
       <th>Name</th>
       <th>Delicious</th>
+      <th></th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -15,6 +16,7 @@
       <tr>
         <td><%= nom.name %></td>
         <td><%= nom.delicious %></td>
+        <td><%= link_to("View #{pluralize(nom.photos.count, 'Photo')}", nom_photos_path(nom.id)) %></td>
         <td><%= link_to 'Show', restaurant_nom_path(@restaurant.id, nom.id) %></td>
         <td><%= link_to 'Edit', edit_restaurant_nom_path(@restaurant.id, nom.id) %></td>
         <td><%= link_to content_tag(:i, '', class: 'fa fa-trash-o'), restaurant_nom_path(@restaurant.id, nom.id), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %></td>
